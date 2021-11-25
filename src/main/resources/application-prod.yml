@@ -1,0 +1,29 @@
+spring:
+    jpa:
+        database-platform: ${DATABASE_PLATFORM_DIALECT}
+        hibernate:
+            ddl-auto: update
+        show-sql: false
+
+    mail:
+        host: ${SMTP_MAIL_HOST}
+        port: ${SMTP_MAIL_PORT}
+        username: ${SMTP_MAIL_USERNAME}
+        password: ${SMTP_MAIL_PASSWORD}
+        properties:
+            mail:
+                smtp:
+                    auth: ${SMTP_MAIL_AUTH_ENABLE}
+                    starttls:
+                        enable: ${SMTP_MAIL_AUTH_TTLS_ENABLE}
+    rabbitmq:
+        queue: ${RABBITMQ_QUEUE_NAME}
+rabbitmq:
+    uri: ${RABBITMQ_URI_CONNECTION}
+database:
+    config:
+        url: ${DATABASE_URL}
+        username: ${DATABASE_USERNAME}
+        password: ${DATABASE_PASSWORD}
+server:
+    port: ${SERVER_PORT}
