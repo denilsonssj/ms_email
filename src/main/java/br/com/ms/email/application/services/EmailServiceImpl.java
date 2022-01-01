@@ -31,7 +31,8 @@ public class EmailServiceImpl implements EmailServicePort {
         try {
             this.sendEmailServicePort.sendEmailSmtp(email);
             email.setStatusEmail(StatusEmail.SENT);
-        } catch(Exception e) {
+        }
+        catch(Exception e) {
             email.setStatusEmail(StatusEmail.ERROR);
         }
         return this.save(email);
