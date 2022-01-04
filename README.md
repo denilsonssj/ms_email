@@ -28,7 +28,42 @@ $ git clone https://github.com/denilsonssj/ms_email.git
 
 ## Getting started
 
-First, make sure you use JDK version 11 or higher. You can download this version at this link.
+First, make sure you use JDK version 11 or higher. You can download this version at this [link](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html).
+
+## Change the configurations
+
+```
+spring:
+    mail:
+        host: "my-smtp-server.com"
+        port: 587
+        username: "username"
+        password: "password"
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+    rabbitmq:
+        queue: ms.email
+rabbitmq:
+    uri: amqps://***************/******
+database:
+    config:
+        url: "jdbc:postgresql:/127.0.0.1:5432/ms_email"
+        username: "postgres"
+        password: "postgres"
+        driver-classname: "org.postgresql.Driver"
+springdoc:
+    version: "@org.springdoc.version@"
+    swagger-ui:
+        path: /swagger-ui.html
+    show-actuator: true
+server:
+    port: 9001
+
+```
 
 ### Install the dependencies
 
@@ -50,7 +85,7 @@ $ ./mvnw package
 
 ## Demo
 
-The demo project can be viewed [here](https://denilsonssj-ms-email.herokuapp.com/).
+The demo project can be viewed [here](https://denilsonssj-ms-email.herokuapp.com/swagger-ui.html).
 
 ## License
 
