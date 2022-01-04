@@ -1,10 +1,4 @@
 spring:
-    jpa:
-        database-platform: ${DATABASE_PLATFORM_DIALECT}
-        hibernate:
-            ddl-auto: update
-        show-sql: false
-
     mail:
         host: ${SMTP_MAIL_HOST}
         port: ${SMTP_MAIL_PORT}
@@ -25,5 +19,11 @@ database:
         url: ${DATABASE_URL}
         username: ${DATABASE_USERNAME}
         password: ${DATABASE_PASSWORD}
+        driver-classname: ${DATABASE_DRIVER_CLASSNAME}
+springdoc:
+    version: @org.springdoc.version@
+    swagger-ui:
+        path: /swagger-ui.html
+    show-actuator: true
 server:
     port: ${SERVER_PORT}

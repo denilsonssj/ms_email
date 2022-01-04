@@ -23,6 +23,7 @@ database:
 springdoc:
     version: @org.springdoc.version@
     swagger-ui:
-        path: /swagger-ui
+        path: /swagger-ui.html
+    show-actuator: true
 server:
     port: ${SERVER_PORT}
