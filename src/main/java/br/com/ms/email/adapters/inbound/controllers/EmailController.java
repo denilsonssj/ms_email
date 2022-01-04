@@ -23,7 +23,7 @@ import br.com.ms.email.application.domain.PageInfo;
 import br.com.ms.email.application.ports.EmailServicePort;
 
 @RestController
-@RequestMapping("/email")
+@RequestMapping("/api/v1/email")
 public class EmailController {
 
     private final EmailServicePort emailServicePort;
